@@ -1,0 +1,141 @@
+# @package models
+MinkowskiBackboneNPM3D:
+  class: minkowski.MinkowskiBackbone
+  conv_type: "SPARSE"
+  use_category: ${data.use_category}
+  loss_weights:
+    semantic: 1
+    offset_norm_loss: 0.1
+    offset_dir_loss: 0.1
+    embedding_loss: 1
+    lambda_reg: 0 #1e-3
+  vizual_ratio: 0.4
+  bandwidth: 0.6
+  block_merge_th: 0.01
+  define_constants:
+    feat_size: 16
+    bn_momentum: 0.02
+  backbone:
+    architecture: "unet"
+    config:
+      class: minkowski.Minkowski_Model
+      conv_type: "SPARSE"
+      define_constants:
+        in_feat: feat_size
+      down_conv:
+        module_name: ResNetDown
+        dimension: 3
+        down_conv_nn:
+          [
+            [ FEAT, in_feat ],
+            [ in_feat, 2*in_feat ],
+            [ 2*in_feat, 3*in_feat ],
+            [ 3*in_feat, 4*in_feat ],
+            [ 4*in_feat, 5*in_feat ],
+            [ 5*in_feat, 6*in_feat ],
+            [ 6*in_feat, 7*in_feat ],
+          ]
+        kernel_size: 3
+        stride: [ 1, 2, 2, 2, 2, 2, 2 ]
+        N: 2
+      up_conv:
+        module_name: ResNetUp
+        dimension: 3
+        up_conv_nn:
+          [
+            [ 7*in_feat, 6*in_feat ],
+            [ 2*6*in_feat, 5*in_feat ],
+            [ 2*5*in_feat, 4*in_feat ],
+            [ 2*4*in_feat, 3*in_feat ],
+            [ 2*3*in_feat, 2*in_feat ],
+            [ 2*2*in_feat, in_feat ],
+            [ 2*in_feat, in_feat ],
+          ]
+        kernel_size: 3
+        stride: [ 2, 2, 2, 2, 2, 2, 1 ]
+        N: 2        
+  mlp_cls:
+    nn: [ feat_size, feat_size ]
+    dropout: 0
+    bn_momentum: bn_momentum
+  mlp_ins:
+    nn: [ feat_size, feat_size ]
+    dropout: 0
+    bn_momentum: bn_momentum
+    embed_dim: 5
+  mlp_offset:
+    nn: [ feat_size, feat_size ]
+    dropout: 0
+    bn_momentum: bn_momentum
+  
+MinkowskiBackboneS3DIS:
+  class: minkowski.MinkowskiBackbone
+  conv_type: "SPARSE"
+  use_category: ${data.use_category}
+  loss_weights:
+    semantic: 1
+    offset_norm_loss: 0.1
+    offset_dir_loss: 0.1
+    embedding_loss: 0.1
+    lambda_reg: 0 #1e-3
+  vizual_ratio: 0.4
+  bandwidth: 0.6
+  block_merge_th: 0.01
+  define_constants:
+    feat_size: 16
+    bn_momentum: 0.02
+  backbone:
+    architecture: "unet"
+    config:
+      class: minkowski.Minkowski_Model
+      conv_type: "SPARSE"
+      define_constants:
+        in_feat: feat_size
+      down_conv:
+        module_name: ResNetDown
+        dimension: 3
+        down_conv_nn:
+          [
+            [ FEAT, in_feat ],
+            [ in_feat, 2*in_feat ],
+            [ 2*in_feat, 3*in_feat ],
+            [ 3*in_feat, 4*in_feat ],
+            [ 4*in_feat, 5*in_feat ],
+            [ 5*in_feat, 6*in_feat ],
+            [ 6*in_feat, 7*in_feat ],
+          ]
+        kernel_size: 3
+        stride: [ 1, 2, 2, 2, 2, 2, 2 ]
+        N: 2
+      up_conv:
+        module_name: ResNetUp
+        dimension: 3
+        up_conv_nn:
+          [
+            [ 7*in_feat, 6*in_feat ],
+            [ 2*6*in_feat, 5*in_feat ],
+            [ 2*5*in_feat, 4*in_feat ],
+            [ 2*4*in_feat, 3*in_feat ],
+            [ 2*3*in_feat, 2*in_feat ],
+            [ 2*2*in_feat, in_feat ],
+            [ 2*in_feat, in_feat ],
+          ]
+        kernel_size: 3
+        stride: [ 2, 2, 2, 2, 2, 2, 1 ]
+        N: 2
+        
+  mlp_cls:
+    nn: [ feat_size, feat_size ]
+    dropout: 0
+    bn_momentum: bn_momentum
+  mlp_ins:
+    nn: [ feat_size, feat_size ]
+    dropout: 0
+    bn_momentum: bn_momentum
+    embed_dim: 5
+  mlp_offset:
+    nn: [ feat_size, feat_size ]
+    dropout: 0
+    bn_momentum: bn_momentum
+
+

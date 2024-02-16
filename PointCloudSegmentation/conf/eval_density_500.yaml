@@ -1,0 +1,25 @@
+defaults: 
+  - visualization: eval
+
+num_workers: 0
+batch_size: 1
+cuda: 0
+weight_name: "latest" # Used during resume, select with model to load from [miou, macc, acc..., latest]
+enable_cudnn: True
+checkpoint_dir: "/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/outputs/setting1_classes5_mixtree_500/setting1_classes5_mixtree_500-PointGroup-PAPER-20240206_170343" # "{your_path}/outputs/2020-01-28/11-04-13" for example
+model_name: PointGroup-PAPER
+precompute_multi_scale: True # Compute multiscate features on cpu for faster training / inference
+enable_dropout: False
+voting_runs: 1
+data: 
+  # number, e.g. 3 OR ply path, e.g. "/cluster/work/igp_psr/yuayue/RA/WP1/check_jan12/TP3D_PanopticSeg/data/npm3dfused/raw/Paris.ply"
+  # fold: ["/cluster/work/igp_psr/yuayue/RA/WP1/check_jan12/TP3D_PanopticSeg/data/npm3dfused/raw/Lille1_1.ply"]
+  fold: ['/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/CULS/CULS_plot_2_annotated_test.ply', '/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/NIBIO/NIBIO_plot_1_annotated_test.ply', '/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/NIBIO/NIBIO_plot_17_annotated_test.ply', '/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/NIBIO/NIBIO_plot_18_annotated_test.ply', '/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/NIBIO/NIBIO_plot_22_annotated_test.ply', '/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/NIBIO/NIBIO_plot_23_annotated_test.ply', '/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/NIBIO/NIBIO_plot_5_annotated_test.ply', '/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/RMIT/RMIT_test_test.ply', '/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/SCION/SCION_plot_31_annotated_test.ply', '/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/SCION/SCION_plot_61_annotated_test.ply', '/cluster/work/igp_psr/binbin/OutdoorPanopticSeg_V2/data_subsample_500/treeinsfused/raw/TUWIEN/TUWIEN_test_test.ply']
+tracker_options: # Extra options for the tracker
+  full_res: True
+  make_submission: True
+  ply_output: "vote1regular.ply"
+
+hydra:
+  run:
+    dir: ${checkpoint_dir}/eval/${now:%Y-%m-%d_%H-%M-%S}
