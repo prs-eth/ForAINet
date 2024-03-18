@@ -1,0 +1,40 @@
+<mxfile host="www.draw.io" modified="2020-01-25T14:12:11.930Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" etag="zq1eKCoOmywRnu91T4cz" version="12.5.8" type="github">
+  <diagram id="r_9oeZ9DHQIs3IMveVyl" name="Page-1">
+    <mxGraphModel dx="782" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="NI0HTN-aDNw9sSmJn8FB-3" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="320" as="sourcePoint"/>
+            <mxPoint x="510" y="320" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NI0HTN-aDNw9sSmJn8FB-6" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="320" as="sourcePoint"/>
+            <mxPoint x="200" y="80" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NI0HTN-aDNw9sSmJn8FB-7" value="" style="endArrow=none;dashed=1;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="370" as="sourcePoint"/>
+            <mxPoint x="110" y="100" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NI0HTN-aDNw9sSmJn8FB-8" value="y=mx+c" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontStyle=1;strokeWidth=2;perimeterSpacing=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="325" y="135" width="90" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="NI0HTN-aDNw9sSmJn8FB-9" value="" style="shape=stencil(lZTdTsMwDIWfJrdHSZzf6zHeY9IKq4B26jp+3p5Uga2m1FLv3PR8ybGdWNHucjqcG2X1ZRz6l+ajPY4nRQ/K2rY7NUM7lkjRXtHuqR+a56G/dsf6fT5Myil669+nHT4rZ7SG1hNm9Vddui08VuC17WZA1siG6QNMXNcng2SZ3miQAEQDRxxwsHkdCBHacyDACin4iMyBknOidcAlpMABLxaJMmLkQBarRIsqEYEES3cDNyDCC5ZMBvETnEEQLBlCcBzwYpUydGZ6r+GC0AaExPUOQdif4PjF86UtQsYWlvcg0O/N+j9hGJ5vSNCC/8XDiQTjt+gTrNugTyTmu9SX+gjvZqHPDm6Ln9ns+AFKcB80dUbN//0dSmWpDjTafwM=);fillColor=none;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="290" width="11" height="27" as="geometry"/>
+        </mxCell>
+        <mxCell id="NI0HTN-aDNw9sSmJn8FB-12" value="y intercept=c" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="65" y="160" width="130" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="NI0HTN-aDNw9sSmJn8FB-14" value="slope=m=tan(angle)" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="225" y="340" width="190" height="30" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,175 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>388abda0-050e-4126-b664-f46c318c1ecc</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>ExecRANSACLine.py</StartupFile>
+    <SearchPath>..\..\</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>RANSAC</Name>
+    <RootNamespace>RANSAC</RootNamespace>
+    <TestFramework>unittest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ExecGradientDescentCircleFitting.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenerateNoisyCircle.py" />
+    <Compile Include="GenerateNoisyLine.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GenerateNoisyLineGaussian.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExecRANSACCircle.py" />
+    <Compile Include="ExecRANSACLine.py" />
+    <Compile Include="MatplotUtil.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="article\images\" />
+    <Folder Include="article\circle-images\" />
+    <Folder Include="input\" />
+    <Folder Include="final_results\" />
+    <Folder Include="article\" />
+    <Folder Include="out\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="article\Book.xlsx" />
+    <Content Include="article\circle-images\gradient-descent-NoisyCircle_x_32_y_28_r_25_d_0.40_sp_0.80_w_25_h_25.0.png.png" />
+    <Content Include="article\circle-images\HumanMind_StraightLine_Ransac.PNG" />
+    <Content Include="article\circle-images\NoisyCircle_x_-15_y_-7_r_58_d_0.40_sp_0.90_w_50_h_50.14.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_-15_y_-7_r_58_d_0.40_sp_0.90_w_50_h_50.14.results.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_-4_y_51_r_33_d_0.40_sp_0.90_w_50_h_50.16.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_-4_y_51_r_33_d_0.40_sp_0.90_w_50_h_50.16.results.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_-5_y_-9_r_24_d_0.40_sp_0.80_w_25_h_25.199.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_-5_y_-9_r_24_d_0.40_sp_0.80_w_25_h_25.199.result.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_-5_y_5_r_19_d_0.40_sp_0.80_w_25_h_25.197.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_-5_y_5_r_19_d_0.40_sp_0.80_w_25_h_25.197.result.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_16_y_35_r_20_d_0.40_sp_0.80_w_25_h_25.196.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_16_y_35_r_20_d_0.40_sp_0.80_w_25_h_25.196.result.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_20_y_2_r_22_d_0.40_sp_0.80_w_25_h_25.1.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_20_y_2_r_22_d_0.40_sp_0.80_w_25_h_25.1.results.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_212_y_-33_r_145_d_0.40_sp_0.85_w_200_h_200.16.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_212_y_-33_r_145_d_0.40_sp_0.85_w_200_h_200.16.results.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_32_y_28_r_25_d_0.40_sp_0.80_w_25_h_25.0.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_32_y_28_r_25_d_0.40_sp_0.80_w_25_h_25.0.results.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_34_y_-6_r_43_d_0.40_sp_0.85_w_50_h_50.9.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_34_y_-6_r_43_d_0.40_sp_0.85_w_50_h_50.9.results.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_36_y_-12_r_57_d_0.40_sp_0.90_w_50_h_50.15.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_36_y_-12_r_57_d_0.40_sp_0.90_w_50_h_50.15.results.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_36_y_15_r_21_d_0.40_sp_0.80_w_25_h_25.198.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_36_y_15_r_21_d_0.40_sp_0.80_w_25_h_25.198.result.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_55_y_34_r_36_d_0.40_sp_0.85_w_50_h_50.2.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_55_y_34_r_36_d_0.40_sp_0.85_w_50_h_50.2.result.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_61_y_67_r_42_d_0.40_sp_0.85_w_50_h_50.4.png" />
+    <Content Include="article\circle-images\NoisyCircle_x_61_y_67_r_42_d_0.40_sp_0.85_w_50_h_50.4.results.png" />
+    <Content Include="article\circle-images\sketch.io.RANSAC-definitions.png" />
+    <Content Include="article\circle-images\Simple.png" />
+    <Content Include="article\circle-images\Simple_After_GradientDescent.png" />
+    <Content Include="article\circle-images\Simple_After_Ransac.png" />
+    <Content Include="article\demo.html" />
+    <Content Include="article\images\Intro_HumanMind_SeesStraightLine.PNG" />
+    <Content Include="article\images\Linear_Regression_Noise.PNG" />
+    <Content Include="article\images\Linear_Regression_Perfect.PNG" />
+    <Content Include="article\images\NoisyImage_1.png" />
+    <Content Include="article\images\NoisyImage_1.result.png" />
+    <Content Include="article\images\NoisyImage_2.png" />
+    <Content Include="article\images\NoisyImage_2.result.png" />
+    <Content Include="article\images\NoisyImage_3.png" />
+    <Content Include="article\images\NoisyImage_3_result.png" />
+    <Content Include="article\images\NoisyImage_4.png" />
+    <Content Include="article\images\NoisyImage_4.result.png" />
+    <Content Include="article\images\NoisyLine-Gaussian-sp-0.80.1.png" />
+    <Content Include="article\images\Sample_Output_After_RANSAC_GenerateNoisyImage.66.png" />
+    <Content Include="article\images\Sample_Output_GenerateNoisyImage.66.png" />
+    <Content Include="article\images\SimpleLinearRegression.drawio" />
+    <Content Include="article\images\SimpleLinearRegression.PNG" />
+    <Content Include="article\images\y_mx_plus_c" />
+    <Content Include="article\images\y_mx_plus_c.PNG" />
+    <Content Include="article\medium.md" />
+    <Content Include="final_results\NoisyImage_1.png" />
+    <Content Include="final_results\NoisyImage_1.result.png" />
+    <Content Include="final_results\NoisyImage_2.png" />
+    <Content Include="final_results\NoisyImage_2.result.png" />
+    <Content Include="final_results\NoisyImage_3.png" />
+    <Content Include="final_results\NoisyImage_3_result.png" />
+    <Content Include="final_results\NoisyImage_4.png" />
+    <Content Include="final_results\NoisyImage_4.result.png" />
+    <Content Include="final_results\NoisyLine-Gaussian-sp-0.80.103.result.png" />
+    <Content Include="final_results\NoisyLine-Gaussian-sp-0.80.118.result.png" />
+    <Content Include="final_results\NoisyLine-Gaussian-sp-0.80.119.result.png" />
+    <Content Include="final_results\NoisyLine-Gaussian-sp-0.80.121.result.png" />
+    <Content Include="final_results\NoisyLine-Gaussian-sp-0.80.104.result.png" />
+    <Content Include="final_results\NoisyLine-Gaussian-sp-0.80.111.result.png" />
+    <Content Include="input\NoisyCircle-HandDrawn-002.png" />
+    <Content Include="input\NoisyCircle-HandDrawn-001.png" />
+    <Content Include="input\NoisyCircle_1.png" />
+    <Content Include="input\NoisyCircle_2.png" />
+    <Content Include="input\NoisyCircle_x_-10_y_-14_r_48_d_0.400000_sp_0.8.186.png" />
+    <Content Include="input\NoisyCircle_x_-15_y_-7_r_58_d_0.40_sp_0.90_w_50_h_50.14.png" />
+    <Content Include="input\NoisyCircle_x_-4_y_51_r_33_d_0.40_sp_0.90_w_50_h_50.16.png" />
+    <Content Include="input\NoisyCircle_x_-5_y_-9_r_24_d_0.40_sp_0.80_w_25_h_25.199.png" />
+    <Content Include="input\NoisyCircle_x_-5_y_5_r_19_d_0.40_sp_0.80_w_25_h_25.197.png" />
+    <Content Include="input\NoisyCircle_x_116_y_-15_r_133_d_0.500000_sp_0.5.177.png" />
+    <Content Include="input\NoisyCircle_x_118_y_59_r_100_d_0.200000_sp_0.8.183.png" />
+    <Content Include="input\NoisyCircle_x_14_y_0_r_16_d_0.400000_sp_0.8.195.png" />
+    <Content Include="input\NoisyCircle_x_16_y_35_r_20_d_0.40_sp_0.80_w_25_h_25.196.png" />
+    <Content Include="input\NoisyCircle_x_20_y_2_r_22_d_0.40_sp_0.80_w_25_h_25.1.png" />
+    <Content Include="input\NoisyCircle_x_212_y_-33_r_145_d_0.40_sp_0.85_w_200_h_200.16.png" />
+    <Content Include="input\NoisyCircle_x_277_y_19_r_194_d_0.40_sp_0.95_w_200_h_200.18.png" />
+    <Content Include="input\NoisyCircle_x_32_y_28_r_25_d_0.40_sp_0.80_w_25_h_25.0.png" />
+    <Content Include="input\NoisyCircle_x_34_y_-6_r_43_d_0.40_sp_0.85_w_50_h_50.9.png" />
+    <Content Include="input\NoisyCircle_x_36_y_-12_r_57_d_0.40_sp_0.90_w_50_h_50.15.png" />
+    <Content Include="input\NoisyCircle_x_36_y_15_r_21_d_0.40_sp_0.80_w_25_h_25.198.png" />
+    <Content Include="input\NoisyCircle_x_55_y_34_r_36_d_0.40_sp_0.85_w_50_h_50.2.png" />
+    <Content Include="input\NoisyCircle_x_60_y_143_r_103_d_0.400000_sp_0.8.182.png" />
+    <Content Include="input\NoisyCircle_x_61_y_67_r_42_d_0.40_sp_0.85_w_50_h_50.4.png" />
+    <Content Include="input\NoisyImage.5.png" />
+    <Content Include="input\NoisyImage_1.png" />
+    <Content Include="input\NoisyImage_2.png" />
+    <Content Include="input\NoisyImage_3.png" />
+    <Content Include="input\NoisyImage_4.png" />
+    <Content Include="input\NoisyLine-Gaussian-sp-0.80.103.png" />
+    <Content Include="input\NoisyLine-Gaussian-sp-0.80.104.png" />
+    <Content Include="input\NoisyLine-Gaussian-sp-0.80.111.png" />
+    <Content Include="input\NoisyLine-Gaussian-sp-0.80.118.png" />
+    <Content Include="input\NoisyLine-Gaussian-sp-0.80.119.png" />
+    <Content Include="input\NoisyLine-Gaussian-sp-0.80.121.png" />
+    <Content Include="input\NoisyLine-Gaussian-sp-1.00.088.png" />
+    <Content Include="article\medium-circle.md" />
+    <Content Include="out\Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.7" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

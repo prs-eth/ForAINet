@@ -1,0 +1,56 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a38662b5-88f4-4734-adff-6708c02c76e0</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>ExecGenericCurveGenerator.py</StartupFile>
+    <SearchPath>..\..\</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>NoisyCurve</Name>
+    <RootNamespace>NoisyCurve</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ExecPatchRansac.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExecGenericCurveGenerator.py" />
+    <Compile Include="GenericCurveGenerator.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="in\" />
+    <Folder Include="out\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="in\Cubic-W=500.H=200.MAXD=15.SP=0.90.6.png" />
+    <Content Include="in\Cubic-W=500.H=200.MAXD=15.SP=0.90.7.png" />
+    <Content Include="in\Sine-W=500.H=200.MAXD=20.SP=0.95.0.png" />
+    <Content Include="in\SineWave-W=200.H=200.MAXD=10.SP=0.90.12.png" />
+    <Content Include="in\SineWave-W=200.H=200.MAXD=10.SP=0.95.6.png" />
+    <Content Include="in\SineWave-W=500.H=200.MAXD=10.SP=0.90.13.png" />
+    <Content Include="in\SineWave-W=500.H=200.MAXD=10.SP=0.95.14.png" />
+    <Content Include="Readme.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

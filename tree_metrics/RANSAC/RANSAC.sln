@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C909B817-737C-4747-A234-AA7B38A5B7F2}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Common", "Common\Common.pyproj", "{EA8337D1-4146-41E9-8F34-35A4B13EECE4}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "UnitTests", "UnitTests\UnitTests.pyproj", "{FDA0BF78-58D2-487B-837F-73B9270AD9AE}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Algorithm", "Algorithm\Algorithm.pyproj", "{6C3F7B71-D6D9-4299-AE50-1563E0BC8824}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "RANSAC", "RANSAC\RANSAC.pyproj", "{388ABDA0-050E-4126-B664-F46C318C1ECC}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "NoisyCurve", "NoisyCurve\NoisyCurve.pyproj", "{A38662B5-88F4-4734-ADFF-6708C02C76E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA8337D1-4146-41E9-8F34-35A4B13EECE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8337D1-4146-41E9-8F34-35A4B13EECE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDA0BF78-58D2-487B-837F-73B9270AD9AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDA0BF78-58D2-487B-837F-73B9270AD9AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3F7B71-D6D9-4299-AE50-1563E0BC8824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3F7B71-D6D9-4299-AE50-1563E0BC8824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{388ABDA0-050E-4126-B664-F46C318C1ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{388ABDA0-050E-4126-B664-F46C318C1ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A38662B5-88F4-4734-ADFF-6708C02C76E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A38662B5-88F4-4734-ADFF-6708C02C76E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F17E66D8-D5B1-4D49-8A20-3454499DDB5E}
+	EndGlobalSection
+EndGlobal

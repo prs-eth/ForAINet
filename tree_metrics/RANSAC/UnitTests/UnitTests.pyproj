@@ -1,0 +1,81 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>fda0bf78-58d2-487b-837f-73b9270ad9ae</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>ransac\test_RansacLineHelper.py</StartupFile>
+    <SearchPath>..\..\</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>UnitTests</Name>
+    <RootNamespace>UnitTests</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <TestFramework>pytest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="common\test_CircleModel.py" />
+    <Compile Include="common\test_LineModel.py" />
+    <Compile Include="common\test_Point.py" />
+    <Compile Include="common\test_Util.py" />
+    <Compile Include="common\test_Vector.py" />
+    <Compile Include="patchextractor\test_PatchExtractor.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ransac\test_BullockCircleFitting.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ransac\test_GradientDescentCircleFitting.py" />
+    <Compile Include="ransac\test_RansacCircleHelper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ransac\test_RansacLineHelper.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+    <Folder Include="common\data\" />
+    <Folder Include="patchextractor\" />
+    <Folder Include="patchextractor\data\" />
+    <Folder Include="ransac\" />
+    <Folder Include="out\" />
+    <Folder Include="ransac\data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="common\data\Readme.txt" />
+    <Content Include="common\data\Util_unittest.png" />
+    <Content Include="patchextractor\data\SimplePatchTest_W=4_H=4.png" />
+    <Content Include="patchextractor\data\SimplePatchTest_W=5_H=5.png" />
+    <Content Include="patchextractor\data\SimplePatchTest_W=7_H=10.png" />
+    <Content Include="ransac\data\Line_100x100.png" />
+    <Content Include="ransac\data\Line_50x50_6pts.png" />
+    <Content Include="ransac\data\NoisyCircle-HandDrawn-001.png" />
+    <Content Include="ransac\data\NoisyCircle_99_50.png" />
+    <Content Include="ransac\data\NoisyCircle_x_-10_y_-14.png" />
+    <Content Include="ransac\data\NoisyCircle_x_-10_y_-14_r_48_d_0.400000_sp_0.8.186.png" />
+    <Content Include="ransac\data\NoisyCircle_x_116_y_-15_r_133_d_0.500000_sp_0.5.177.png" />
+    <Content Include="ransac\data\NoisyCircle_x_6_y_-30_r_118.162.png" />
+    <Content Include="ransac\data\Line_50x30.png" />
+    <Content Include="ransac\data\NoisyCircle_99_50.result.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

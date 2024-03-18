@@ -20,6 +20,10 @@ For example, data_set1_5classes contains the data for "basic setting" in Table 4
 
 # Commands for running point cloud segmentation experiments based on different settings:
 
+```bash
+cd /$YOURPATH$/ForAINet/PointCloudSegmentation
+```
+
 1. Experiment for "basic setting" in the paper.
 
 ```bash
@@ -88,7 +92,7 @@ python train.py task=panoptic data=panoptic/treeins_set1_add_all_20010 models=pa
 
 ```bash
 # Command for training
-# To be added here
+python train.py task=panoptic data=panoptic/treeins_set1_curved_subsam models=panoptic/FORpartseg_3heads model_name=PointGroup-PAPER training=treeins_set1_addCurvedSubsample job_name=#YOUR_JOB_NAME#
 ```
 
 11. Experiment for "+ TreeMix" setting in the paper 
@@ -109,20 +113,26 @@ python train.py task=panoptic data=panoptic/treeins_set1_treemix3d_pd10 models=p
 ```
 
 
-13. Commands for testing. Remenber to change "checkpoint_dir" parameter to your path.
+13. Commands for testing. Remember to change "checkpoint_dir" parameter to your path.
 
 ```bash
 # Command for test
+# remember to change the following 2 parameters in eval.yaml:
+# 1. "checkpoint_dir" to your log files path
+# 2. "data" is the paths for your test files
 python eval.py
 
 # Command for output the final evaluation file
+# replace parameter "test_sem_path" by your path
 python evaluation_stats_FOR.py
 ```
 
 # Commands for running tree parameters extraction code:
 
 ```bash
-# To be added here
+cd /$YOURPATH$/ForAINet/tree_metrics
+# remember to adjust parameters based on your dataset
+python measurement.py
 ```
 
 # Commands for running code for extracting manually extracted geometric features:
