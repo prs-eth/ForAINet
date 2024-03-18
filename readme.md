@@ -16,7 +16,12 @@ Please replace the old raw files with our new raw files:
 
 For example, data_set1_5classes contains the data for "basic setting" in Table 4 in our paper.
 
-**Link for downloading the data to be added**
+1. dataset for settings "basic setting", "+ binary semantic loss", "+ class weights", "+ height weights", "+ region weights", "+ elastic distortion and subsampling", "+ TreeMix"
+
+You can download it:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10828636.svg)](https://doi.org/10.5281/zenodo.10828636)
+
+2. For other setting to be added here.
 
 # Commands for running point cloud segmentation experiments based on different settings:
 
