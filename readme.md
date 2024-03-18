@@ -138,18 +138,23 @@ python measurement.py
 # Commands for running code for extracting manually extracted geometric features:
 
 ```bash
-# To be added here
+# Please note that our code is based on the Superpoint Graphs repository, which can be found at https://github.com/loicland/superpoint_graph. We have included our custom partition_FORdata.py file.
+cd /$YOURPATH$/ForAINet/superpoint_graph/partition
+python partition_FORdata.py
 ```
 
 # Citing
-If you find our work useful, please do not hesitate to cite it (This paper is still under review, and we will update the citation infos after the acceptance):
+If you find our work useful, please do not hesitate to cite it:
 
 ```
-@inproceedings{
-  Xiang2023,
+@article{
+  xiang2024automated,
   title={Automated forest inventory: analysis of high-density airborne LiDAR point clouds with 3D deep learning},
   author={Binbin Xiang, Maciej Wielgosz, Theodora Kontogianni, Torben Peters, Stefano Puliti, Rasmus Astrup, Konrad Schindler},
-  year={2023},
-  url = {\url{https://arxiv.org/abs/2312.15084}}
+  journal={Remote Sensing of Environment},
+  volume={305},
+  pages={114078},
+  year={2024},
+  publisher={Elsevier}
 }
 ```
