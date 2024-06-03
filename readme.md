@@ -120,6 +120,9 @@ python train.py task=panoptic data=panoptic/treeins_set1_treemix3d_pd10 models=p
 
 13. Commands for testing. Remember to change "checkpoint_dir" parameter to your path.
 
+Our pretrained model could be download here:
+https://polybox.ethz.ch/index.php/s/aUypOXxOW3pYPe9
+
 ```bash
 # Command for test
 # remember to change the following 2 parameters in eval.yaml:
