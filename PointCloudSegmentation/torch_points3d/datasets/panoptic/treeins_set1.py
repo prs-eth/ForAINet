@@ -201,7 +201,7 @@ def final_eval(pre_sem, pre_ins_offset, pos, gt_sem, gt_ins, output_file_name):
     set3 = set1 & set2
     sem_classcount_final = list(set3)
     
-    log_string('Semantic Segmentation oAcc without ground points: {}'.format(sum(true_positive_classes[sem_classcount_final])/float(sum(positive_classes[[sem_classcount_final]]))))
+    log_string('Semantic Segmentation oAcc without ground points: {}'.format(sum(true_positive_classes[sem_classcount_final])/float(sum(positive_classes[sem_classcount_final]))))
     #log_string('Semantic Segmentation Acc: {}'.format(true_positive_classes / gt_classes))
     log_string('Semantic Segmentation mAcc without ground points: {}'.format(np.mean(np.array(true_positive_classes)[sem_classcount_final] / np.array(gt_classes)[sem_classcount_final])))
     log_string('Semantic Segmentation IoU without ground points: {}'.format(np.array(iou_list)[sem_classcount_final]))
