@@ -366,8 +366,8 @@ def final_eval(pre_sem, pre_ins_embed, pre_ins_offset, gt_sem, gt_ins):
     PQ_embed = np.zeros(NUM_CLASSES)
     PQStar_embed = np.zeros(NUM_CLASSES)
     for i_sem in range(NUM_CLASSES):
-        tp = np.asarray(tpsins[i_sem]).astype(np.float)
-        fp = np.asarray(fpsins[i_sem]).astype(np.float)
+        tp = np.asarray(tpsins[i_sem]).astype(float)
+        fp = np.asarray(fpsins[i_sem]).astype(float)
         tp = np.sum(tp)
         fp = np.sum(fp)
         rec = tp / total_gt_ins[i_sem]
@@ -384,8 +384,8 @@ def final_eval(pre_sem, pre_ins_embed, pre_ins_offset, gt_sem, gt_ins):
         PQ[i_sem] = SQ[i_sem]*RQ[i_sem]
         PQStar[i_sem] = IoU_Mc[i_sem]/total_gt_ins[i_sem]
         
-        tp = np.asarray(tpsins_embed[i_sem]).astype(np.float)
-        fp = np.asarray(fpsins_embed[i_sem]).astype(np.float)
+        tp = np.asarray(tpsins_embed[i_sem]).astype(float)
+        fp = np.asarray(fpsins_embed[i_sem]).astype(float)
         tp = np.sum(tp)
         fp = np.sum(fp)
         rec = tp / total_gt_ins[i_sem]

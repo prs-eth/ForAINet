@@ -372,8 +372,8 @@ def final_eval(pre_sem, pre_ins_embed, pre_ins_offset, gt_sem, gt_ins, output_fi
     ################################################################
     for i_sem in ins_classcount:
         ###### metrics for offset ######
-        tp = np.asarray(tpsins[i_sem]).astype(np.float)
-        fp = np.asarray(fpsins[i_sem]).astype(np.float)
+        tp = np.asarray(tpsins[i_sem]).astype(float)
+        fp = np.asarray(fpsins[i_sem]).astype(float)
         tp = np.sum(tp)
         fp = np.sum(fp)
         # recall and precision
@@ -398,8 +398,8 @@ def final_eval(pre_sem, pre_ins_embed, pre_ins_offset, gt_sem, gt_ins, output_fi
         PQStar[i_sem] = PQ[i_sem]
 
         ###### metrics for embedding ######
-        tp = np.asarray(tpsins_embed[i_sem]).astype(np.float)
-        fp = np.asarray(fpsins_embed[i_sem]).astype(np.float)
+        tp = np.asarray(tpsins_embed[i_sem]).astype(float)
+        fp = np.asarray(fpsins_embed[i_sem]).astype(float)
         tp = np.sum(tp)
         fp = np.sum(fp)
         # recall and precision
