@@ -376,8 +376,8 @@ def export(mesh_file, agg_file, seg_file, meta_file, label_map_file, output_file
 
     return (
         mesh_vertices.astype(np.float32),
-        label_ids.astype(np.int),
-        instance_ids.astype(np.int),
+        label_ids.astype(int),
+        instance_ids.astype(int),
         instance_bboxes.astype(np.float32),
         object_id_to_label_id,
     )

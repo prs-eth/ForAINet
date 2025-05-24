@@ -145,10 +145,10 @@ def final_eval(pre_sem, pre_ins_embed, pre_ins_offset, pos, gt_sem, gt_ins):
     all_mean_cov = [[] for itmp in range(NUM_CLASSES)]
     all_mean_weighted_cov = [[] for itmp in range(NUM_CLASSES)]
 
-    pred_ins_complete = np.asarray(pre_ins_offset).reshape(-1).astype(np.int)
-    pred_sem_complete = np.asarray(pre_sem).reshape(-1).astype(np.int)
-    gt_ins_complete = np.asarray(gt_ins).reshape(-1).astype(np.int)
-    gt_sem_complete = np.asarray(gt_sem).reshape(-1).astype(np.int)
+    pred_ins_complete = np.asarray(pre_ins_offset).reshape(-1).astype(int)
+    pred_sem_complete = np.asarray(pre_sem).reshape(-1).astype(int)
+    gt_ins_complete = np.asarray(gt_ins).reshape(-1).astype(int)
+    gt_sem_complete = np.asarray(gt_sem).reshape(-1).astype(int)
 
     idxc = (gt_sem_complete!=0) | (pred_sem_complete!=0)
     pred_ins = pred_ins_complete[idxc]

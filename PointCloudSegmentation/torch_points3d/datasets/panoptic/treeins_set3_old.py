@@ -145,10 +145,10 @@ def final_eval(pre_sem, pre_ins_offset, pos, gt_sem, gt_ins, output_file_name):
     # data_class = PlyData.read(pred_class_label_filename)
     # data_ins = PlyData.read(pred_ins_label_filename)
 
-    pred_ins_complete = np.asarray(pre_ins_offset).reshape(-1).astype(np.int)
-    pred_sem_complete = np.asarray(pre_sem).reshape(-1).astype(np.int) + 1
-    gt_ins_complete = np.asarray(gt_ins).reshape(-1).astype(np.int)
-    gt_sem_complete = np.asarray(gt_sem).reshape(-1).astype(np.int) + 1
+    pred_ins_complete = np.asarray(pre_ins_offset).reshape(-1).astype(int)
+    pred_sem_complete = np.asarray(pre_sem).reshape(-1).astype(int) + 1
+    gt_ins_complete = np.asarray(gt_ins).reshape(-1).astype(int)
+    gt_sem_complete = np.asarray(gt_sem).reshape(-1).astype(int) + 1
 
     # idxc = (gt_sem_complete!=0) | (pred_sem_complete!=0)
     idxc = ((gt_sem_complete != 0) & (gt_sem_complete != 1)) | ((pred_sem_complete != 0) & (pred_sem_complete != 1))
