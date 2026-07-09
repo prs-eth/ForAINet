@@ -334,8 +334,8 @@ if __name__ == '__main__':
         ###### metrics for offset ######
         if not tpsins[i_sem] or not fpsins[i_sem]:
             continue
-        tp = np.asarray(tpsins[i_sem]).astype(np.float)
-        fp = np.asarray(fpsins[i_sem]).astype(np.float)
+        tp = np.asarray(tpsins[i_sem]).astype(float)
+        fp = np.asarray(fpsins[i_sem]).astype(float)
         tp = np.sum(tp)
         fp = np.sum(fp)
         # recall and precision

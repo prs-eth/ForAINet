@@ -205,7 +205,7 @@ def mean_shift_euc(X, bandwidth=None, seeds=None,
 
             # assign labels
             nbrs = NearestNeighbors(n_neighbors=1).fit(cluster_centers)
-            labels = np.zeros(n_samples, dtype=np.int)
+            labels = np.zeros(n_samples, dtype=int)
             distances, idxs = nbrs.kneighbors(X)
             if cluster_all:
                 labels = idxs.flatten()

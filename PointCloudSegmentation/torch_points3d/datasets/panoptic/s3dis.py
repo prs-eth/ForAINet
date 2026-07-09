@@ -143,9 +143,9 @@ def generate_separate_room(pos, pre_sem, pre_ins_embed, pre_ins_offset):
     #data_class = PlyData.read(pred_class_label_filenames)
     #data_ins = PlyData.read(pred_ins_label_filenames)
     #data_ins_offset = PlyData.read(pred_ins_label_filenames_offset)
-    pred_ins_complete = np.asarray(pre_ins_embed).reshape(-1).astype(np.int)
-    pred_ins_complete_offset = np.asarray(pre_ins_offset).reshape(-1).astype(np.int)
-    pred_sem_complete = np.asarray(pre_sem).reshape(-1).astype(np.int)
+    pred_ins_complete = np.asarray(pre_ins_embed).reshape(-1).astype(int)
+    pred_ins_complete_offset = np.asarray(pre_ins_offset).reshape(-1).astype(int)
+    pred_sem_complete = np.asarray(pre_sem).reshape(-1).astype(int)
     room_file_path = 'prediction_perRoom_embed' #join(file_path_out +'prediction_perRoom_embed')
     room_file_path2 = 'prediction_perRoom_offset' #join(file_path_out +'prediction_perRoom_offset')
     if not exists(room_file_path):
@@ -263,11 +263,11 @@ def final_eval():
         print(room_filesname_embed)
         data_class_cur = read_ply(room_filesname)
         data_class_cur_embed = read_ply(room_filesname_embed)
-        pred_ins = data_class_cur['pre_ins'].reshape(-1).astype(np.int)
-        pred_sem = data_class_cur['pre_sem'].reshape(-1).astype(np.int)
-        gt_ins = data_class_cur['gt_ins'].reshape(-1).astype(np.int)
-        gt_sem = data_class_cur['gt_class'].reshape(-1).astype(np.int)
-        pred_ins_embed = data_class_cur_embed['pre_ins'].reshape(-1).astype(np.int)
+        pred_ins = data_class_cur['pre_ins'].reshape(-1).astype(int)
+        pred_sem = data_class_cur['pre_sem'].reshape(-1).astype(int)
+        gt_ins = data_class_cur['gt_ins'].reshape(-1).astype(int)
+        gt_sem = data_class_cur['gt_class'].reshape(-1).astype(int)
+        pred_ins_embed = data_class_cur_embed['pre_ins'].reshape(-1).astype(int)
         
         print(gt_sem.shape)
 
@@ -459,8 +459,8 @@ def final_eval():
     PQ_embed = np.zeros(NUM_CLASSES)
     #PQStar_embed = np.zeros(NUM_CLASSES)
     for i_sem in range(NUM_CLASSES):
-        tp = np.asarray(tpsins[i_sem]).astype(np.float)
-        fp = np.asarray(fpsins[i_sem]).astype(np.float)
+        tp = np.asarray(tpsins[i_sem]).astype(float)
+        fp = np.asarray(fpsins[i_sem]).astype(float)
         tp = np.sum(tp)
         fp = np.sum(fp)
         rec = tp / total_gt_ins[i_sem]
@@ -477,8 +477,8 @@ def final_eval():
         PQ[i_sem] = SQ[i_sem]*RQ[i_sem]
         #PQStar[i_sem] = IoU_Mc[i_sem]/total_gt_ins[i_sem]
         
-        tp = np.asarray(tpsins_embed[i_sem]).astype(np.float)
-        fp = np.asarray(fpsins_embed[i_sem]).astype(np.float)
+        tp = np.asarray(tpsins_embed[i_sem]).astype(float)
+        fp = np.asarray(fpsins_embed[i_sem]).astype(float)
         tp = np.sum(tp)
         fp = np.sum(fp)
         rec = tp / total_gt_ins[i_sem]

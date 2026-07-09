@@ -58,7 +58,7 @@ def read_gt_log(path):
         else:
             line = all_mat[i].split("\t")
 
-            mat[i % 5 - 1] = np.asarray(line[:4], dtype=np.float)
+            mat[i % 5 - 1] = np.asarray(line[:4], dtype=float)
     list_mat.append(mat)
     return list_pair, list_mat
 
